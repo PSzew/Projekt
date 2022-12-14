@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projekt.Home"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid RowSpacing="1.2" ColumnSpacing="1.2" BackgroundColor="black">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.8*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <BoxView Color="Gray" Grid.Column="0" Grid.Row="1"/>
+            <BoxView Color="Gray" Grid.Column="1" Grid.Row="1"/>
+            <BoxView Color="Gray" Grid.Column="2" Grid.Row="1"/>
+            <BoxView Color="Gray" Grid.Column="3" Grid.Row="1"/>
+
+            <BoxView Color="Gray" Grid.Column="0" Grid.Row="2"/>
+            <BoxView Color="Gray" Grid.Column="1" Grid.Row="2"/>
+            <BoxView Color="Gray" Grid.Column="2" Grid.Row="2"/>
+            <BoxView Color="Gray" Grid.Column="3" Grid.Row="2"/>
+
+            <BoxView Color="Gray" Grid.Column="0" Grid.Row="3"/>
+            <BoxView Color="Gray" Grid.Column="1" Grid.Row="3"/>
+            <BoxView Color="Gray" Grid.Column="2" Grid.Row="3"/>
+            <BoxView Color="Gray" Grid.Column="3" Grid.Row="3"/>
+
+            <BoxView Color="Gray" Grid.Column="0" Grid.Row="4"/>
+            <BoxView Color="Gray" Grid.Column="1" Grid.Row="4"/>
+            <BoxView Color="Gray" Grid.Column="2" Grid.Row="4"/>
+            <BoxView Color="Gray" Grid.Column="3" Grid.Row="4"/>
+
+            <BoxView Color="Gray" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="4"/>
+
+            <Label FontFamily="Calculator" Text="0" x:Name="result" Grid.Row="0" Grid.ColumnSpan="4" FontSize="76" TextColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Margin="0,0,30,0"/>
+
+            <Label FontFamily="Calculator" Text="7" Grid.Row="1" Grid.Column="0" FontSize="60" TextColor="white" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label FontFamily="Calculator" Text="8" Grid.Row="1" Grid.Column="1" FontSize="60" TextColor="white" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label FontFamily="Calculator" Text="9" Grid.Row="1" Grid.Column="2" FontSize="60" TextColor="white" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label FontFamily="Calculator" Text="×" Grid.Row="1" Grid.Column="3" FontSize="60" TextColor="white" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+
+            <Label FontFamily="Calculator" Text="4" Grid.Row="2" Grid.Column="0" FontSize="60" TextColor="white" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label FontFamily="Calculator" Text="5" Grid.Row="2" Grid.Column="1" FontSize="60" TextColor="white" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label FontFamily="Calculator" Text="6" Grid.Row="2" Grid.Column="2" FontSize="60" TextColor="white" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label FontFamily="Calculator" Text="+" Grid.Row="2" Grid.Column="3" FontSize="60" TextColor="white" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+
+            <Label FontFamily="Calculator" Text="1" Grid.Row="3" Grid.Column="0" FontSize="60" TextColor="white" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label FontFamily="Calculator" Text="2" Grid.Row="3" Grid.Column="1" FontSize="60" TextColor="white" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label FontFamily="Calculator" Text="3" Grid.Row="3" Grid.Column="2" FontSize="60" TextColor="white" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label FontFamily="Calculator" Text="-" Grid.Row="3" Grid.Column="3" FontSize="60" TextColor="white" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+
+            <Label FontFamily="Calculator" Text="÷" Grid.Row="4" Grid.Column="0" FontSize="60" TextColor="white" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label FontFamily="Calculator" Text="0" Grid.Row="4" Grid.Column="1" FontSize="60" TextColor="white" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label FontFamily="Calculator" Text="," Grid.Row="4" Grid.Column="2" FontSize="60" TextColor="white" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label FontFamily="Calculator" Text="=" Grid.Row="4" Grid.Column="3" FontSize="60" TextColor="white" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            
+            <Label FontFamily="Calculator" Text="C" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" FontSize="60" TextColor="white" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+
+            <Button Opacity="0.1" Grid.Row="1" Grid.Column="0" Clicked="sevenClicked"/>
+            <Button Opacity="0.1" Grid.Row="1" Grid.Column="1" Clicked="eightClicked"/>
+            <Button Opacity="0.1" Grid.Row="1" Grid.Column="2" Clicked="NineClicked"/>
+            <Button Opacity="0.1" Grid.Row="1" Grid.Column="3" Clicked="MultClicked"/>
+
+            <Button Opacity="0.1" Grid.Row="2" Grid.Column="0" Clicked="FourClicked"/>
+            <Button Opacity="0.1" Grid.Row="2" Grid.Column="1" Clicked="FiveClicked"/>
+            <Button Opacity="0.1" Grid.Row="2" Grid.Column="2" Clicked="SixClicked"/>
+            <Button Opacity="0.1" Grid.Row="2" Grid.Column="3" Clicked="AddClicked"/>
+
+            <Button Opacity="0.1" Grid.Row="3" Grid.Column="0" Clicked="OneClicked"/>
+            <Button Opacity="0.1" Grid.Row="3" Grid.Column="1" Clicked="TwoClicked"/>
+            <Button Opacity="0.1" Grid.Row="3" Grid.Column="2" Clicked="ThreeClicked"/>
+            <Button Opacity="0.1" Grid.Row="3" Grid.Column="3" Clicked="SubClicked"/>
+
+            <Button Opacity="0.1" Grid.Row="4" Grid.Column="0" Clicked="DivClicked"/>
+            <Button Opacity="0.1" Grid.Row="4" Grid.Column="1" Clicked="ZeroClicked"/>
+            <Button Opacity="0.1" Grid.Row="4" Grid.Column="2" Clicked="ComClicked"/>
+            <Button Opacity="0.1" Grid.Row="4" Grid.Column="3" Clicked="EquClicked"/>
+
+            <Button Opacity="0.1" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" Clicked="Clear"/>
+            
+            
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

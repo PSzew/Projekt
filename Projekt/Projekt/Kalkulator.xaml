@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projekt.Kalkulator"
+             xmlns:local="clr-namespace:Projekt"
+             Title="Zwykły">
+
+    <StackLayout>
+        <ListView BackgroundColor="White" x:Name="ListView" x:FieldModifier="Public">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type local:FlyItemOut}">
+                    <local:FlyItemOut Title="Kalkulator" IconSrc="Calculator.png" TargetPage="{x:Type local:Home}"/>
+                    <local:FlyItemOut Title="Systemy liczbowe" IconSrc="Calculator.png" TargetPage="{x:Type local:KalkulatorSystem}"/>
+                    <local:FlyItemOut Title="Info" IconSrc="Info.png" TargetPage="{x:Type local:About}"/>
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="64"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding IconSrc}"/>
+                            <Label Grid.Column="1" FontSize="20" FontAttributes="Bold"  Text="{Binding Title}"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+  
+</ContentPage>
