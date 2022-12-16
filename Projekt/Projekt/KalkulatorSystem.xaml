@@ -6,7 +6,7 @@
              NavigationPage.HasNavigationBar="False">
     
     <ContentPage.Content>
-        <Grid>
+        <Grid BackgroundColor="AliceBlue">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.85*"/>
                 <ColumnDefinition Width="*"/>
@@ -22,9 +22,9 @@
             <Label Text="DEC: " Grid.Row="1" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontFamily="Calculator" FontSize="60" Margin="15,0,0,0"/>
             <Label Text="BIN: " Grid.Row="2" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontFamily="Calculator" FontSize="60" Margin="15,0,0,0"/>
 
-            <Entry Keyboard="Default" Grid.Row="0" Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="Gray" WidthRequest="210" Opacity="0.5" FontFamily="Calculator" FontSize="35" TextChanged="Hex" x:Name="HEX"/>
-            <Entry Keyboard="Numeric" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="Gray" WidthRequest="210" Opacity="0.5" FontFamily="Calculator" FontSize="35" TextChanged="Dec" x:Name="DEC"/>
-            <Entry Keyboard="Numeric" Grid.Row="2" Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="Gray" WidthRequest="210" Opacity="0.5" FontFamily="Calculator" FontSize="35" TextChanged="Binary" x:Name="BIN"/>
+            <Entry Keyboard="Default" Grid.Row="0" Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="Gray" WidthRequest="210" Opacity="0.5" FontFamily="Calculator" FontSize="40" TextChanged="Hex" x:Name="HEX"/>
+            <Entry Keyboard="Numeric" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="Gray" WidthRequest="210" Opacity="0.5" FontFamily="Calculator" FontSize="40" TextChanged="Dec" x:Name="DEC"/>
+            <Entry Keyboard="Numeric" Grid.Row="2" Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="Gray" WidthRequest="210" Opacity="0.5" FontFamily="Calculator" FontSize="40" TextChanged="Binary" x:Name="BIN"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

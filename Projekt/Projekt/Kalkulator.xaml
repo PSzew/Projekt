@@ -11,6 +11,7 @@
                 <x:Array Type="{x:Type local:FlyItemOut}">
                     <local:FlyItemOut Title="Kalkulator" IconSrc="Calculator.png" TargetPage="{x:Type local:Home}"/>
                     <local:FlyItemOut Title="Systemy liczbowe" IconSrc="Calculator.png" TargetPage="{x:Type local:KalkulatorSystem}"/>
+                    <local:FlyItemOut Title="Kantor" IconSrc="currency.png" TargetPage="{x:Type local:Kantor}"/>
                     <local:FlyItemOut Title="Info" IconSrc="Info.png" TargetPage="{x:Type local:About}"/>
                 </x:Array>
             </ListView.ItemsSource>
