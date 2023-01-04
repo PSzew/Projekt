@@ -30,3 +30,4 @@ namespace Projekt
 
     }
 }
+//Class model potrzebny do deserializacji danych JSON do obiektu
