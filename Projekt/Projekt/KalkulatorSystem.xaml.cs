@@ -20,13 +20,13 @@ namespace Projekt
             InitializeComponent();
         }
 
-        static bool binaryg = true;
+        static bool binaryg = true; //Zmienne przechowywujące to czy tekst wpisany do pola jest prawidłowy
         static bool hexg = true;
-        private void Dec(object sender, TextChangedEventArgs e)
+        private void Dec(object sender, TextChangedEventArgs e) //funkcja przeliczająca z systemu 10 na 2 i 16
         {
-            if (DEC.Text.Length != 0)
+            if (DEC.Text.Length != 0) //Warunek jeśli długość tektu w polu jest inny niż 0 funkcja się wykonuje
             {
-                BIN.Text = Convert.ToString(Convert.ToInt32(DEC.Text, 10), 2);
+                BIN.Text = Convert.ToString(Convert.ToInt32(DEC.Text, 10), 2); //konwersja liczby na liczbę w systemie dwójkowym.
                 HEX.Text = Convert.ToInt32(DEC.Text, 10).ToString("X");
             }          
         }
@@ -38,16 +38,16 @@ namespace Projekt
             else hexg = true;
             SolidColorBrush brush2 = new SolidColorBrush(Xamarin.Forms.Color.Gray);
             HEX.Background = brush2;
-            if (System.Text.RegularExpressions.Regex.IsMatch(HEX.Text, @"\A\b[0-9a-fA-F]+\b\Z") == false)
+            if (System.Text.RegularExpressions.Regex.IsMatch(HEX.Text, @"\A\b[0-9a-fA-F]+\b\Z") == false) //sprawdzenie czy liczba w systemie 16 pasuje do tablicy znaków przy pomocy regexów
             {
                 SolidColorBrush brush = new SolidColorBrush(Xamarin.Forms.Color.Red);
-                HEX.Background = brush;
-                hexg = false;
+                HEX.Background = brush; //zmiana koloru tła jeśli podana wartość nie pasuje do tablicy znaków regex
+                hexg = false; //ustawienie statusu na false
             }
             if(hexg)
             {
-                BIN.Text = Convert.ToString(Convert.ToInt32(HEX.Text, 16), 2);
-                DEC.Text = Convert.ToInt32(HEX.Text, 16).ToString("");
+                BIN.Text = Convert.ToString(Convert.ToInt32(HEX.Text, 16), 2); //konwersja pomiędzy systemami liczbowymi
+                DEC.Text = Convert.ToInt32(HEX.Text, 16).ToString(""); //konwersja pomiędzy systemami liczbowymi
             }
             if(HEX.Text == "")
             {
@@ -62,22 +62,22 @@ namespace Projekt
             if(BIN.Text.Length == 0)
                 binaryg= false;
             else binaryg= true;
-            for (int i=0;i<BIN.Text.Length;i++)
+            for (int i=0;i<BIN.Text.Length;i++) //sprawdzenie czy liczba zawiera prawidłowe znaki
             {
                 if (BIN.Text[i].ToString() != "1")
                 {
                     if(BIN.Text[i].ToString() != "0")
                     {
                         SolidColorBrush brush = new SolidColorBrush(Xamarin.Forms.Color.Red);
-                        BIN.Background = brush;
-                        binaryg = false;
+                        BIN.Background = brush; //zmiana koloru tła
+                        binaryg = false; //ustawienie statusu na false
                     }
                 }               
             }
             if (binaryg)
             {
-                DEC.Text = Convert.ToInt32(BIN.Text, 2).ToString();
-                HEX.Text = Convert.ToInt32(BIN.Text, 2).ToString("X");
+                DEC.Text = Convert.ToInt32(BIN.Text, 2).ToString(); //konwersja pomiędzy systemami liczbowymi
+                HEX.Text = Convert.ToInt32(BIN.Text, 2).ToString("X"); //konwersja pomiędzy systemami liczbowymi
 
             }
         }
